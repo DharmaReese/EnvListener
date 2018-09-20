@@ -1,0 +1,13 @@
+CREATE TABLE detail_X(1~31)
+(
+  namne VARCHAR(50) NOT NULL,
+  source_id NUMBER NOT NULL,
+  dit_id NUMBER NOT NULL,
+  dev_id NUMBER NOT NULL,
+  sensor_address NUMBER NOT NULL,
+  counter NUMBER NOT NULL,
+  cmd NUMBER NOT NULL,
+  data NUMBER NOT NULL,
+  status NUMBER NOT NULL,
+  gather_date DATE NOT NULL
+);
