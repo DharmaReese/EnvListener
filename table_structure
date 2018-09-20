@@ -1,3 +1,4 @@
+// 创建31张存储当天数据的表
 CREATE TABLE detail_X(1~31)
 (
   namne VARCHAR(50) NOT NULL,
