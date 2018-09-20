@@ -24,7 +24,7 @@ public class DBStoreImpl implements DBStore, ConfigurationAware {
     @Override
     public void saveEnvironmentToDB(Collection<Environment> collection) {
         ConnectionPool pool = ConnectionPool.getInstance();
-        // 已执行的sql语句
+        // 已执行的sql语句的数量
         int countOfExecute = 0;
         try {
             Connection conn = pool.getConnection();
