@@ -43,7 +43,6 @@ public class BackupImpl implements Backup, ConfigurationAware {
 
             oos.writeObject(collection);
             oos.flush();
-
             config.getLog().info("写入备份文件信息" + collection.size() + "行成功");
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -68,6 +67,7 @@ public class BackupImpl implements Backup, ConfigurationAware {
             try {
                 fis = new FileInputStream(file);
                 ois = new ObjectInputStream(fis);
+                
                 collection = (Collection<Environment>) ois.readObject();
                 config.getLog().info("读取备份文件信息" + collection.size() + "行成功");
             } catch (FileNotFoundException e) {
