@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Configuration>
+    <DataClient class="data.impl.DataClientImpl">
+        <host>127.0.0.1</host>
+        <port>10000</port>
+        <time>1000</time>
+        <logPath>src/main/resources/radwtmp</logPath>
+    </DataClient>
+    <Gather class="client.impl.GatherImpl">
+        <logPath>src/main/resources/radwtmp</logPath>
+        <pointPath>src/main/resources/point.properties</pointPath>
+    </Gather>
+    <EnvClient class="client.impl.EnvClientImpl">
+        <host>127.0.0.1</host>
+        <port>9999</port>
+        <time>3000</time>
+    </EnvClient>
+    <DBStore class="server.impl.DBStoreImpl">
+        <batch>10</batch>
+    </DBStore>
+    <Backup class="util.impl.BackupImpl">
+        <backupPath>src/main/resources/backup</backupPath>
+    </Backup>
+    <EnvServer class="server.impl.EnvServerImpl">
+        <port>9999</port>
+    </EnvServer>
+    <Log class="util.impl.LogImpl">
+        <proPath>src/main/resources/log4j.properties</proPath>
+    </Log>
+</Configuration>
